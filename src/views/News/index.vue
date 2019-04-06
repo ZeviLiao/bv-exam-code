@@ -56,16 +56,16 @@ export default {
       // })
     },
     tableFilter() {
-      return this.newsList
-      // const searchTerm = this.search.toLowerCase()
-      // if (this.newsList) {
-      //   return this.newsList.filter(
-      //     item =>
-      //       (item.title !== null &&
-      //         item.title.toLowerCase().includes(searchTerm)) ||
-      //       (item.body !== null && item.body.toLowerCase().includes(searchTerm))
-      //   )
-      // }
+      // return this.newsList
+      const searchTerm = this.search.toLowerCase()
+      if (this.newsList) {
+        return this.newsList.filter(
+          item =>
+            (item.title !== null &&
+              item.title.toLowerCase().includes(searchTerm)) ||
+            (item.body !== null && item.body.toLowerCase().includes(searchTerm))
+        )
+      }
     }
   },
   components: {

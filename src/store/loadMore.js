@@ -9,7 +9,6 @@ const loadMore = {
   },
   mutations: {
     APPEND_NEWS: (state, { newList, count, total }) => {
-      debugger
       state.loadCount = count
       state.newsList = _.concat(state.newsList, newList)
       state.eof = state.newsList.length === total

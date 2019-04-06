@@ -7,7 +7,6 @@ export default {
     let { page, limit } = JSON.parse(body)
     console.log(page)
     let pageList = newData.slice((page - 1) * limit, (page - 1) * limit + limit)
-    debugger
     return {
       total: newData.length,
       items: pageList
