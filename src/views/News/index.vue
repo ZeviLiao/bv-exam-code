@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import { fetchList } from '@/api/news'
 import NewsItem from './NewsItem'
 import LoadMore from './LoadMore'
@@ -39,7 +40,13 @@ export default {
     getList() {
       this.listLoading = true
       fetchList().then(response => {
-        this.newsList = response.data
+        let tmpList = response.data.map(o => {
+          return {
+            ...o,
+            updated: new Date(o.updated)
+          }
+        })
+        this.newsList = _.orderBy(tmpList, ['updated'], ['desc'])
         this.listLoading = false
       })
     },
