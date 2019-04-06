@@ -4,7 +4,8 @@ export function fetchList(query) {
   return request({
     url: '/news',
     method: 'get',
-    params: query
+    params: query,
+    data: query
   })
 }
 

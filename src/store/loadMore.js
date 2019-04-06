@@ -17,10 +17,9 @@ const loadMore = {
       // this.listLoading = true
       let listQuery = {
         page: 1,
-        limit: 15
+        limit: 6
       }
       fetchList(listQuery).then(response => {
-        debugger
         let tmpList = response.data.map(o => {
           return {
             ...o,
