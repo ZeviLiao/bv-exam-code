@@ -4,12 +4,15 @@ import { fetchList } from '@/api/news'
 const loadMore = {
   state: {
     loadCount: 0,
-    newsList: []
+    newsList: [],
+    eof: false
   },
   mutations: {
-    APPEND_NEWS: (state, { newList, count }) => {
+    APPEND_NEWS: (state, { newList, count, total }) => {
+      debugger
       state.loadCount = count
       state.newsList = _.concat(state.newsList, newList)
+      state.eof = state.newsList.length === total
     }
   },
   actions: {
@@ -20,14 +23,15 @@ const loadMore = {
         limit: 6
       }
       fetchList(listQuery).then(response => {
-        let tmpList = response.data.map(o => {
+        let tmpList = response.data.items.map(o => {
           return {
             ...o,
             updated: new Date(o.updated)
           }
         })
+        let total = response.data.total
         let newsList = _.orderBy(tmpList, ['updated'], ['desc'])
-        commit('APPEND_NEWS', { newList: newsList, count })
+        commit('APPEND_NEWS', { newList: newsList, count, total })
         // this.listLoading = false
       })
     }

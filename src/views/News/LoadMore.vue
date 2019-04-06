@@ -1,5 +1,5 @@
 <template>
-  <button @click="loadMore">load more</button>
+  <button @click="loadMore" :disabled="eof">load more</button>
 </template>
 
 <script>
@@ -9,6 +9,9 @@ export default {
     loadMore() {
       this.$root.$emit('loadMore')
     }
+  },
+  props: {
+    eof: Boolean
   }
 }
 </script>

@@ -7,7 +7,7 @@
       </li>
     </ul>
     <hr />
-    <LoadMore />
+    <LoadMore :eof="eof" />
   </div>
 </template>
 
@@ -73,7 +73,7 @@ export default {
     LoadMore
   },
   computed: {
-    ...mapGetters(['loadCount', 'newsList'])
+    ...mapGetters(['loadCount', 'newsList', 'eof'])
   }
 }
 </script>

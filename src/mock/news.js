@@ -6,7 +6,12 @@ export default {
   getNews({ body }) {
     let { page, limit } = JSON.parse(body)
     console.log(page)
-    return newData.slice((page - 1) * limit + 1, (page - 1) * limit + limit)
+    let pageList = newData.slice((page - 1) * limit, (page - 1) * limit + limit)
+    debugger
+    return {
+      total: newData.length,
+      items: pageList
+    }
   },
   getNewsById(newId) {
     return newData.filter(o => o.newId == newId)
