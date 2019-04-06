@@ -1,17 +1,17 @@
 <template>
   <div>
-    <MenuButtonList />
+    <LinkList />
     <SearchBox />
   </div>
 </template>
 
 <script>
-import MenuButtonList from './MenuButtonList'
+import LinkList from '@/components/LinkList'
 import SearchBox from './SearchBox'
 export default {
   name: 'NavBar',
   components: {
-    MenuButtonList,
+    LinkList,
     SearchBox
   }
 }

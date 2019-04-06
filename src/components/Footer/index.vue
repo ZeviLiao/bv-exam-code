@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import LinkList from './LinkList'
+import LinkList from '@/components/LinkList'
 export default {
   name: 'Footer',
   components: {
