@@ -6,7 +6,7 @@ Mock.setup({
 })
 
 // 登录相关
-Mock.mock(/\/news/, 'post', newsAPI.getNews)
-Mock.mock(/\/news\/\.*/, 'post', newsAPI.getNewsById)
+Mock.mock(/\/news/, 'get', newsAPI.getNews)
+Mock.mock(/\/news\/\.*/, 'get', newsAPI.getNewsById)
 
 export default Mock
