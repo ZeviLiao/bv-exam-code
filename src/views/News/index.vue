@@ -6,12 +6,15 @@
         <NewsItem :news="news" />
       </li>
     </ul>
+    <hr />
+    <LoadMore />
   </div>
 </template>
 
 <script>
-import NewsItem from './NewsItem'
 import { fetchList } from '@/api/news'
+import NewsItem from './NewsItem'
+import LoadMore from './LoadMore'
 export default {
   name: 'News',
   created() {
@@ -22,12 +25,14 @@ export default {
       console.log(data)
       this.search = data
     })
+    this.$root.$on('loadMore', () => {
+      console.log('load more!')
+    })
   },
   data() {
     return {
       newsList: [],
       search: ''
-      // filterNewsList: []
     }
   },
   methods: {
@@ -35,7 +40,6 @@ export default {
       this.listLoading = true
       fetchList().then(response => {
         this.newsList = response.data
-        // this.filterNewsList = this.newsList
         this.listLoading = false
       })
     },
@@ -52,7 +56,8 @@ export default {
     }
   },
   components: {
-    NewsItem
+    NewsItem,
+    LoadMore
   }
 }
 </script>
