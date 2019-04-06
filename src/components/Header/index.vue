@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <header>
     <!-- <TitlePage title="News" /> -->
     <Logo />
     <NavBar />
-  </div>
+  </header>
 </template>
 
 <script>

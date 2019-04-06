@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <footer>
     <LinkList />
-  </div>
+    &copy; Copyright 2019 HTML.am
+  </footer>
 </template>
 
 <script>

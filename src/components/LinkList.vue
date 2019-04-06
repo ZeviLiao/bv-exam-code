@@ -7,7 +7,6 @@
         </router-link>
       </li>
     </ul>
-    <button @click="getRouteList">getRouteList</button>
   </div>
 </template>
 
@@ -27,11 +26,7 @@ export default {
         })
     }
   },
-  methods: {
-    getRouteList() {
-      console.log(this.linkList)
-    }
-  },
+  methods: {},
   components: {
     // LinkItem
   }

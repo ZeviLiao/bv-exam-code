@@ -1,6 +1,8 @@
 <template>
   <div>
-    <LinkList />
+    <nav>
+      <LinkList />
+    </nav>
     <SearchBox />
   </div>
 </template>
