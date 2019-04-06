@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <News />
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
+    <Header />
     <router-view />
-    <b-alert show> Hello {{ name }}! </b-alert> -->
+    <!-- <Content>
+      
+    </Content> -->
+    <Footer />
+    <!-- <b-alert show> Hello {{ name }}! </b-alert> -->
   </div>
 </template>
 <script>
-import News from './views/News'
+import Header from './components/Header'
+// import Content from './components/Content'
+import Footer from './components/Footer'
 export default {
   components: {
-    News
+    Header,
+    // Content,
+    Footer
   }
 }
 </script>

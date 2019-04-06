@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>blue</button>
+    <button>yellow</button>
   </div>
 </template>
 

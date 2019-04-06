@@ -1,23 +1,26 @@
 <template>
-  <div>
-    <Header />
-    <Content />
-    <Footer />
+  <div class="container">
+    News
+    <ul>
+      <li>
+        <NewsItem />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Content from './components/Content'
-import Footer from './components/Footer'
+import NewsItem from './NewsItem'
 export default {
   name: 'News',
   components: {
-    Header,
-    Content,
-    Footer
+    NewsItem
   }
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.container {
+  background-color: yellow;
+}
+</style>
