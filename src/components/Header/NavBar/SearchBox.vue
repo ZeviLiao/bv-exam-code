@@ -1,12 +1,18 @@
 <template>
   <div>
-    <input type="text" />
+    <input type="text" @keyup="searchData" />
   </div>
 </template>
 
 <script>
 export default {
-  naem: 'SearchBox'
+  naem: 'SearchBox',
+  methods: {
+    searchData(e) {
+      //console.log(e.target.value)
+      this.$root.$emit('searchData', e.target.value)
+    }
+  }
 }
 </script>
 

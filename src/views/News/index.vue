@@ -1,8 +1,8 @@
 <template>
   <div>
-    News
+    News - {{ search }}
     <ul>
-      <li v-for="news in newsList" :key="news.newsId">
+      <li v-for="news in tableFilter()" :key="news.newsId">
         <NewsItem :news="news" />
       </li>
     </ul>
@@ -17,9 +17,17 @@ export default {
   created() {
     this.getList()
   },
+  mounted() {
+    this.$root.$on('searchData', data => {
+      console.log(data)
+      this.search = data
+    })
+  },
   data() {
     return {
-      newsList: []
+      newsList: [],
+      search: ''
+      // filterNewsList: []
     }
   },
   methods: {
@@ -27,8 +35,20 @@ export default {
       this.listLoading = true
       fetchList().then(response => {
         this.newsList = response.data
+        // this.filterNewsList = this.newsList
         this.listLoading = false
       })
+    },
+    tableFilter() {
+      const searchTerm = this.search.toLowerCase()
+      if (this.newsList) {
+        return this.newsList.filter(
+          item =>
+            (item.title !== null &&
+              item.title.toLowerCase().includes(searchTerm)) ||
+            (item.body !== null && item.body.toLowerCase().includes(searchTerm))
+        )
+      }
     }
   },
   components: {
