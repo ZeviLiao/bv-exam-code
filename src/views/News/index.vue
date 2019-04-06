@@ -1,12 +1,12 @@
 <template>
-  <section slot="header">
+  <div>
     News
     <ul>
       <li>
         <NewsItem />
       </li>
     </ul>
-  </section>
+  </div>
 </template>
 
 <script>
