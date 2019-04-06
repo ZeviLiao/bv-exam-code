@@ -1,12 +1,15 @@
 <template>
   <div>
-    <button>yellow</button>
+    <p>{{ news.id }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NewsItem'
+  name: 'NewsItem',
+  props: {
+    news: Object
+  }
 }
 </script>
 
