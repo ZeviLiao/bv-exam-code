@@ -16,7 +16,7 @@ const loadMore = {
     loadMoreAsync({ commit }, count) {
       // this.listLoading = true
       let listQuery = {
-        page: 1,
+        page: count,
         limit: 6
       }
       fetchList(listQuery).then(response => {
