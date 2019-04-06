@@ -6,7 +6,7 @@ export default {
   getNews() {
     return newData
   },
-  getNewsByKey(newId) {
+  getNewsById(newId) {
     return newData.filter(o => o.newId == newId)
   }
 }
