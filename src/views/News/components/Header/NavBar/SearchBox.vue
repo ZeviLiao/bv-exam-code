@@ -1,12 +1,12 @@
 <template>
   <div>
-    <img src="https://via.placeholder.com/120?text=Logo" alt="Logo" />
+    <input type="text" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Logo'
+  naem: 'SearchBox'
 }
 </script>
 

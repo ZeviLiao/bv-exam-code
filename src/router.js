@@ -33,11 +33,6 @@ export default new Router({
       component: () => import('@/views/TV')
     },
     {
-      path: '/tv',
-      name: 'tv',
-      component: () => import('@/views/TV')
-    },
-    {
       path: '/404',
       component: () => import('@/views/errorPage/404'),
       hidden: true

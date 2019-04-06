@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <News />
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
-    <b-alert show> Hello {{ name }}! </b-alert>
+    <b-alert show> Hello {{ name }}! </b-alert> -->
   </div>
 </template>
+<script>
+import News from './views/News'
+export default {
+  components: {
+    News
+  }
+}
+</script>
 
 <style lang="scss">
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,5 +35,5 @@
       color: #42b983;
     }
   }
-}
+} */
 </style>

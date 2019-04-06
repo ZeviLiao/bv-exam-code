@@ -1,12 +1,15 @@
 <template>
   <div>
-    <img src="https://via.placeholder.com/120?text=Logo" alt="Logo" />
+    <button>{{ label }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Logo'
+  name: 'MenuButton',
+  props: {
+    label: String
+  }
 }
 </script>
 
