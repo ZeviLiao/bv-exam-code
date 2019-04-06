@@ -14,6 +14,10 @@ export default new Router({
       component: News
     },
     {
+      path: '/news',
+      redirect: '/'
+    },
+    {
       path: '/regions',
       name: 'regions',
       component: () => import('@/views/Regions')
