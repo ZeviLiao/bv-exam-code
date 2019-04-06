@@ -70,10 +70,10 @@ export default {
     }
   },
   methods: {
-    onSlideStart(slide) {
+    onSlideStart() {
       this.sliding = true
     },
-    onSlideEnd(slide) {
+    onSlideEnd() {
       this.sliding = false
     }
   }

@@ -1,20 +1,12 @@
-import { param2Obj } from '@/utils'
 import json from './json/data.json'
 
-const userMap = json
+const newData = json
 
 export default {
-  loginByUsername: config => {
-    const { username } = JSON.parse(config.body)
-    return userMap[username]
+  getNews() {
+    return newData
   },
-  getUserInfo: config => {
-    const { token } = param2Obj(config.url)
-    if (userMap[token]) {
-      return userMap[token]
-    } else {
-      return false
-    }
-  },
-  logout: () => 'success'
+  getNewsByKey(newId) {
+    return newData.filter(o => o.newId == newId)
+  }
 }
