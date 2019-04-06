@@ -1,16 +1,12 @@
 <template>
   <div>
-    <LinkList />
+    <a href="">hello</a>
   </div>
 </template>
 
 <script>
-import LinkList from './LinkList'
 export default {
-  name: 'Footer',
-  components: {
-    LinkList
-  }
+  name: 'LinkItem'
 }
 </script>
 

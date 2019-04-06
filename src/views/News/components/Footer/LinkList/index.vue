@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <LinkList />
-  </div>
+  <ul>
+    <li>
+      <LinkItem />
+    </li>
+  </ul>
 </template>
 
 <script>
-import LinkList from './LinkList'
+import LinkItem from './LinkItem'
 export default {
   name: 'Footer',
   components: {
-    LinkList
+    LinkItem
   }
 }
 </script>
