@@ -6,7 +6,9 @@
 
 <script>
 export default {
-  name: 'LinkItem'
+  name: 'LinkItem',
+
+  methods: {}
 }
 </script>
 
