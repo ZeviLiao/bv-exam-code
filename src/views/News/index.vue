@@ -2,7 +2,7 @@
   <div>
     News
     <ul>
-      <li v-for="news in newsList" :key="news.id">
+      <li v-for="news in newsList" :key="news.newsId">
         <NewsItem :news="news" />
       </li>
     </ul>

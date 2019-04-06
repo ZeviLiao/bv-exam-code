@@ -1,6 +1,10 @@
 <template>
   <div>
-    <p>{{ news.id }}</p>
+    <p>{{ news.newsId }}</p>
+    <p>{{ news.title }}</p>
+    <p>{{ news.body }}</p>
+    <p>{{ news.thumbnailUrl }}</p>
+    <p>{{ news.updated }}</p>
   </div>
 </template>
 
