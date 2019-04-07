@@ -6,3 +6,11 @@
 @import './basics/base.scss';
 @import './basics/layout.scss';
 @import './basics/links.scss';
+
+.navbar-dark .navbar-toggler {
+    border: none;
+}
+
+a {
+    color: #00A092;
+}

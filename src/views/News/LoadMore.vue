@@ -1,11 +1,11 @@
 <template>
   <button
     type="button"
-    class="btn btn-primary btn-lg btn-block"
+    class="btn btn-outline-secondary btn-lg btn-block"
     @click="loadMore"
     :disabled="eof"
   >
-    load more
+    Load more
   </button>
 </template>
 

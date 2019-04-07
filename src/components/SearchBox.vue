@@ -45,4 +45,22 @@ export default {
   pointer-events: none;
   color: #aaa;
 }
+
+@media (min-width: 768px) {
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white !important;
+    opacity: 1; /* Firefox */
+  }
+
+  .has-search .form-control {
+    color: white;
+    background-color: #27a79b;
+    border: none;
+  }
+  .has-search .form-control-feedback {
+    color: white;
+    background-color: #27a79b;
+  }
+}
 </style>

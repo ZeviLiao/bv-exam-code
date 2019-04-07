@@ -1,7 +1,7 @@
 <template>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
+  <div class="collapse navbar-collapse nav-bar" id="navbarCollapse">
     <LinkList />
-    <SearchBox class="d-none d-md-block" />
+    <SearchBox class="d-none d-md-block search-box" />
   </div>
 </template>
 
@@ -17,4 +17,13 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.nav-bar {
+  background: #00a092;
+  .search-box {
+    position: relative;
+    top: 7px;
+    right: 7px;
+  }
+}
+</style>

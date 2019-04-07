@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <Logo/>
+          <Logo />
         </a>
         <button
           class="navbar-toggler"
@@ -39,4 +39,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@media (min-width: 768px) {
+  .bg-dark {
+    background-color: white !important;
+  }
+}
+</style>
