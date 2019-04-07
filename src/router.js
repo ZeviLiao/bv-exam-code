@@ -1,26 +1,53 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import News from '@/views/News'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: Home
+      path: '/',
+      name: 'news',
+      component: News,
+      meta: { title: 'News', noCache: true }
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
+      path: '/news',
+      redirect: '/',
+      hidden: true
+    },
+    {
+      path: '/regions',
+      name: 'regions',
+      component: () => import('@/views/Regions'),
+      meta: { title: 'Regions', noCache: true }
+    },
+    {
+      path: '/video',
+      name: 'video',
+      component: () => import('@/views/Video'),
+      meta: { title: 'Video', noCache: true }
+    },
+    {
+      path: '/tv',
+      name: 'tv',
+      component: () => import('@/views/TV'),
+      meta: { title: 'TV', noCache: true }
+    },
+    // {
+    //   path: '/example',
+    //   name: 'example',
+    //   component: () => import('@/components/Example'),
+    //   meta: { title: 'Example', noCache: true }
+    // },
+    {
+      path: '/404',
+      component: () => import('@/views/errorPage/404'),
+      hidden: true
+    },
+    { path: '*', redirect: '/404', hidden: true }
   ]
-});
+})
