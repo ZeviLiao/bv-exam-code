@@ -6,18 +6,10 @@
           <NewsItem :news="news" />
         </div>
       </div>
+      <hr />
+      <LoadMore :eof="eof" />
     </div>
   </div>
-  <!-- <div>
-    News - {{ search }}
-    <ul>
-      <li v-for="news in tableFilter()" :key="news.newsId">
-        
-      </li>
-    </ul>
-    <hr />
-    <LoadMore :eof="eof" />
-  </div>-->
 </template>
 
 <script>
