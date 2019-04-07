@@ -4,9 +4,14 @@
       <a href>
         <h5 class="card-title">{{ news.title }}</h5>
       </a>
-      <div class="card-image" :style="{ backgroundImage: 'url(' + news.thumbnailUrl + ')' }"></div>
+      <div
+        class="card-image"
+        :style="{ backgroundImage: 'url(' + news.thumbnailUrl + ')' }"
+      ></div>
       <p class="card-text">{{ news.body }}</p>
-      <p class="d-flex justify-content-between align-items-center">{{ formatDate(news.updated) }}</p>
+      <p class="d-flex justify-content-between align-items-center">
+        {{ formatDate(news.updated) }}
+      </p>
     </div>
   </div>
   <div class="card" v-else>
@@ -14,7 +19,10 @@
       <div class="col">
         <div class="card-header border-0">
           <!-- <img src="//placehold.it/200" alt> -->
-          <div class="card-image" :style="{ backgroundImage: 'url(' + news.thumbnailUrl + ')' }"></div>
+          <div
+            class="card-image"
+            :style="{ backgroundImage: 'url(' + news.thumbnailUrl + ')' }"
+          ></div>
         </div>
       </div>
       <div class="col">
@@ -22,9 +30,9 @@
           <h4 class="card-title">{{ news.title }}</h4>
           <p class="card-text">{{ news.body }}</p>
           <!-- {{ news.body }} -->
-          <p
-            class="d-flex justify-content-between align-items-center"
-          >{{ formatDate(news.updated) }}</p>
+          <p class="d-flex justify-content-between align-items-center">
+            >{{ formatDate(news.updated) }}
+          </p>
         </div>
       </div>
     </div>

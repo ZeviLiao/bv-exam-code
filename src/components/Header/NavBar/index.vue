@@ -1,13 +1,13 @@
 <template>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <LinkList />
-    <SearchBox />
+    <LinkList/>
+    <SearchBox/>
   </div>
 </template>
 
 <script>
 import LinkList from './LinkList'
-import SearchBox from './SearchBox'
+import SearchBox from '@/components/SearchBox'
 export default {
   name: 'NavBar',
   components: {
@@ -17,4 +17,5 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+</style>

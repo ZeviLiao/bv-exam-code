@@ -1,13 +1,13 @@
 <template>
   <div class="album py-5 bg-light">
     <div class="container">
+      <SearchBox></SearchBox>
       <div class="row">
         <div class="col-md-4" v-for="news in tableFilter()" :key="news.newsId">
-          <NewsItem :news="news" />
+          <NewsItem :news="news"></NewsItem>
         </div>
       </div>
-      <hr />
-      <LoadMore :eof="eof" />
+      <LoadMore :eof="eof"></LoadMore>
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@
 import NewsItem from './NewsItem'
 import LoadMore from './LoadMore'
 import store from '@/store'
+import SearchBox from '@/components/SearchBox'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -71,7 +72,8 @@ export default {
   },
   components: {
     NewsItem,
-    LoadMore
+    LoadMore,
+    SearchBox
   },
   computed: {
     ...mapGetters(['loadCount', 'newsList', 'eof'])
