@@ -6,7 +6,7 @@
           <Logo device="dsk" class="d-block d-md-none" />
           <Logo device="mob" class="d-none d-md-block" />
         </a>
-        <h5 class="d-block d-md-none sub-title">News</h5>
+        <h5 class="d-block d-md-none sub-title">{{ titleName() }}</h5>
         <button
           class="navbar-toggler"
           type="button"
@@ -16,7 +16,8 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <BuggerBar></BuggerBar>
+          <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
         <NavBar></NavBar>
       </div>
@@ -30,13 +31,19 @@
 
 <script>
 import Logo from './Logo'
-
+import BuggerBar from './BuggerBar'
 import NavBar from './NavBar'
 export default {
   name: 'Header',
+  methods: {
+    titleName() {
+      return this.$route.meta.title
+    }
+  },
   components: {
     Logo,
-    NavBar
+    NavBar,
+    BuggerBar
   }
 }
 </script>
