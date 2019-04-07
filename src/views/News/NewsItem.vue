@@ -1,7 +1,9 @@
 <template>
   <div class="card mb-4 box-shadow">
     <div class="card-body">
-      <h5 class="card-title">{{ news.title }}</h5>
+      <a href="">
+        <h5 class="card-title">{{ news.title }}</h5>
+      </a>
       <img
         class="card-img-top"
         :src="news.thumbnailUrl"
@@ -40,4 +42,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.card-text {
+  height: 198px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+</style>
