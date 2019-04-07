@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import LinkList from '@/components/LinkList'
+import LinkList from './LinkList'
 import SearchBox from './SearchBox'
 export default {
   name: 'NavBar',

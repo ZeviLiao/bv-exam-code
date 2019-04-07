@@ -1,6 +1,6 @@
 <template>
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item active" v-for="(menu, index) in linkList" :key="index">
+    <li class="nav-item" v-for="(menu, index) in linkList" :key="index">
       <router-link
         class="nav-link"
         :to="{ path: menu.path }"
