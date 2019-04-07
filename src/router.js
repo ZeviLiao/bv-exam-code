@@ -38,6 +38,12 @@ export default new Router({
       meta: { title: 'TV', noCache: true }
     },
     {
+      path: '/example',
+      name: 'example',
+      component: () => import('@/components/Example'),
+      meta: { title: 'Example', noCache: true }
+    },
+    {
       path: '/404',
       component: () => import('@/views/errorPage/404'),
       hidden: true
