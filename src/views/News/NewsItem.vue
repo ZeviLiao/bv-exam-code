@@ -1,18 +1,20 @@
 <template>
   <div class="card mb-4 box-shadow">
     <div class="card-body">
-      <a href="">
+      <a href>
         <h5 class="card-title">{{ news.title }}</h5>
       </a>
-      <img
+      <!-- <img
         class="card-img-top"
         :src="news.thumbnailUrl"
         alt="Generic placeholder image"
         height="160"
-      />
-      <p class="card-text">
-        {{ news.body }}
-      </p>
+      />-->
+      <div
+        class="image"
+        :style="{ backgroundImage: 'url(' + news.thumbnailUrl + ')' }"
+      ></div>
+      <p class="card-text">{{ news.body }}</p>
       <p class="d-flex justify-content-between align-items-center">
         {{ formatDate(news.updated) }}
       </p>
@@ -24,7 +26,7 @@
     <p>{{ news.body }}</p>
     <p>{{ news.thumbnailUrl }}</p>
     <p>{{ formatDate(news.updated) }}</p>
-  </div> -->
+  </div>-->
 </template>
 
 <script>
@@ -49,5 +51,11 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
+}
+div.image {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
 }
 </style>
