@@ -11,7 +11,7 @@
         ></div>
         <p class="card-text">{{ news.body }}</p>
         <p class="d-flex justify-content-between align-items-center">
-          {{ formatDate(news.updated) }}
+          Updated: {{ formatDate(news.updated) }}
         </p>
       </div>
     </div>
@@ -27,12 +27,14 @@
           </div>
         </div>
         <div class="col">
-          <div class="card-block px-2">
-            <h4 class="card-title">{{ news.title }}</h4>
+          <div class="card-block pr-2 pt-3">
+            <a href>
+              <h5 class="card-title">{{ news.title }}</h5>
+            </a>
             <p class="card-text">{{ news.body }}</p>
             <!-- {{ news.body }} -->
             <p class="d-flex justify-content-between align-items-center">
-              {{ formatDate(news.updated) }}
+              Updated: {{ formatDate(news.updated) }}
             </p>
           </div>
         </div>
@@ -73,14 +75,7 @@ div.card-image {
 @media (max-width: 767px) {
   .card-text {
     height: 150px;
-    overflow: hidden;
-    display: -webkit-box;
     -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-  }
-  div.card-image {
-    width: 200px;
-    height: 160px;
   }
 }
 </style>
