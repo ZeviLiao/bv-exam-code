@@ -3,7 +3,7 @@
     type="button"
     class="btn btn-outline-secondary btn-lg btn-block"
     @click="loadMore"
-    :disabled="eof"
+    v-if="!eof"
   >
     Load more
   </button>

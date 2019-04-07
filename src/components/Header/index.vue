@@ -5,6 +5,7 @@
         <a class="navbar-brand" href="#">
           <Logo />
         </a>
+        <h5 class="d-block d-md-none">News</h5>
         <button
           class="navbar-toggler"
           type="button"
