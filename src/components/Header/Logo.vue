@@ -1,6 +1,10 @@
 <template>
   <div>
-    <img src="https://via.placeholder.com/120?text=Logo" alt="Logo" />
+    <img
+      class="rounded-circle"
+      src="https://via.placeholder.com/120?text=Logo"
+      alt="Logo"
+    />
   </div>
 </template>
 

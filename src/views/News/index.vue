@@ -81,6 +81,6 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 </style>

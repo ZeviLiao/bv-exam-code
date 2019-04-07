@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-4 box-shadow">
+  <!-- <div class="card mb-4 box-shadow">
     <img
       class="card-img-top"
       data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
@@ -21,6 +21,23 @@
         </div>
         <small class="text-muted">9 mins</small>
       </div>
+    </div>
+  </div> -->
+  <div class="card mb-4 box-shadow">
+    <img
+      class="card-img"
+      :src="news.thumbnailUrl"
+      alt="Generic placeholder image"
+      height="160"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ news.title }}</h5>
+      <p class="card-text">
+        {{ news.body }}
+      </p>
+      <p class="d-flex justify-content-between align-items-center">
+        {{ formatDate(news.updated) }}
+      </p>
     </div>
   </div>
   <!-- <div>
