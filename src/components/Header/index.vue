@@ -3,7 +3,8 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <Logo />
+          <Logo device="dsk" class="d-block d-md-none" />
+          <Logo device="mob" class="d-none d-md-block" />
         </a>
         <h5 class="d-block d-md-none">News</h5>
         <button

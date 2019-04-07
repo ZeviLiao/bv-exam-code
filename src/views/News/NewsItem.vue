@@ -32,7 +32,7 @@
             <p class="card-text">{{ news.body }}</p>
             <!-- {{ news.body }} -->
             <p class="d-flex justify-content-between align-items-center">
-              >{{ formatDate(news.updated) }}
+              {{ formatDate(news.updated) }}
             </p>
           </div>
         </div>
