@@ -6,7 +6,7 @@
     </div> -->
     <Header />
     <Content />
-    <Footer />
+    <Footer class="d-none d-md-block" />
     <!-- <b-alert show> Hello {{ name }}! </b-alert> -->
   </div>
 </template>

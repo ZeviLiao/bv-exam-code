@@ -6,7 +6,7 @@
           <Logo device="dsk" class="d-block d-md-none" />
           <Logo device="mob" class="d-none d-md-block" />
         </a>
-        <h5 class="d-block d-md-none">News</h5>
+        <h5 class="d-block d-md-none sub-title">News</h5>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,6 +42,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sub-title {
+  color: white;
+}
+
+.bg-dark {
+  background-color: #01998a !important;
+}
+
 @media (min-width: 768px) {
   .bg-dark {
     background-color: white !important;

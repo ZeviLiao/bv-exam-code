@@ -1,8 +1,10 @@
 <template>
   <ul class="menulink">
     <li v-for="(menu, index) in linkList" :key="index">
-      <router-link :to="{ path: menu.path }">{{ menu.title }}</router-link>
-      <span v-if="!latest(index)">|</span>
+      <router-link class="link" :to="{ path: menu.path }">{{
+        menu.title
+      }}</router-link>
+      <span v-if="!latest(index)" :style="{ color: 'lightgray' }">|</span>
     </li>
   </ul>
 </template>
@@ -36,6 +38,9 @@ ul.menulink {
   list-style: none;
   li {
     display: inline-block;
+    .link {
+      margin: 0 10px;
+    }
   }
 }
 </style>
