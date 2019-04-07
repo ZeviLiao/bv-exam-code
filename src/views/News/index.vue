@@ -1,7 +1,7 @@
 <template>
   <div class="album py-5 bg-light">
     <div class="container">
-      <SearchBox></SearchBox>
+      <SearchBox class="d-block d-md-none"></SearchBox>
       <div class="row">
         <div class="col-md-4" v-for="news in tableFilter()" :key="news.newsId">
           <NewsItem :news="news"></NewsItem>

@@ -1,5 +1,12 @@
 <template>
-  <button @click="loadMore" :disabled="eof">load more</button>
+  <button
+    type="button"
+    class="btn btn-primary btn-lg btn-block"
+    @click="loadMore"
+    :disabled="eof"
+  >
+    load more
+  </button>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <LinkList/>
-    <SearchBox/>
+    <LinkList />
+    <SearchBox class="d-none d-md-block" />
   </div>
 </template>
 
@@ -17,5 +17,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

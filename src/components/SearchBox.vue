@@ -1,5 +1,5 @@
 <template>
-  <form class="form-inline mt-2 mt-md-0">
+  <form class="form mt-2 mt-md-0">
     <div class="form-group has-search">
       <span class="fa fa-search form-control-feedback"></span>
       <input
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* Styles for wrapping the search box */
 
 /* Bootstrap 4 text input with search icon */
