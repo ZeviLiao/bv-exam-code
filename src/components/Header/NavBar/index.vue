@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <nav>
-      <LinkList />
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <LinkList />
     <SearchBox />
   </div>
 </template>

@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="(menu, index) in linkList" :key="index">
-        <router-link :to="{ path: menu.path }" active-class="active">
-          {{ menu.title }}
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active" v-for="(menu, index) in linkList" :key="index">
+      <router-link
+        class="nav-link"
+        :to="{ path: menu.path }"
+        active-class="active"
+      >
+        {{ menu.title }}
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <script>

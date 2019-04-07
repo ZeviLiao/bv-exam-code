@@ -1,14 +1,23 @@
 <template>
-  <div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" v-for="news in tableFilter()" :key="news.newsId">
+          <NewsItem :news="news" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div>
     News - {{ search }}
     <ul>
       <li v-for="news in tableFilter()" :key="news.newsId">
-        <NewsItem :news="news" />
+        
       </li>
     </ul>
     <hr />
     <LoadMore :eof="eof" />
-  </div>
+  </div>-->
 </template>
 
 <script>

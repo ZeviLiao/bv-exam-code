@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <!-- <input type="text" @keyup="searchData" /> -->
+  <form class="form-inline mt-2 mt-md-0">
     <div class="form-group has-search">
       <span class="fa fa-search form-control-feedback"></span>
       <input
@@ -10,8 +9,7 @@
         @keyup="searchData"
       />
     </div>
-  </div>
-
+  </form>
   <!-- Actual search box -->
 </template>
 
